@@ -1,0 +1,33 @@
+#logo-color-container {
+    margin-left: 5%;
+    width: 300px;
+    float: left;
+}
+
+.color-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    #logo-color-container {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        padding: 20px 10px;
+
+        width: 100%;
+        float: none;
+    }
+
+    .color-row {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .color-row p {
+        display: none;
+    }
+}

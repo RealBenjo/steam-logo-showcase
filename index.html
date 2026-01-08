@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="theme-color" content="#171a21">
 	<title>A Night At Locke Manor on Steam</title>
-	<link rel="shortcut icon" href="https://store.steampowered.com/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/logo_steam.png" type="image/x-icon">
 
-
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<link href="index_files/motiva_sans.css" rel="stylesheet" type="text/css">
 	<link href="index_files/shared_global.css" rel="stylesheet" type="text/css">
@@ -322,7 +322,9 @@
 				</div>
 				<div class="responsive_header_logo">
 					<a href="https://store.steampowered.com/?snr=1_5_9__global-responsive-menu">
-						<img src="index_files/header_logo.png" alt="STEAM" height="36" border="0">
+						<canvas id="steamLogoCanvas" height="36">
+              if you are seeing this text, the canvas was not loaded properly
+            </canvas>
 					</a>
 				</div>
 			</div>
@@ -342,7 +344,18 @@
 					<div class="logo">
 						<span id="logo_holder">
 							<a href="https://store.steampowered.com/?snr=1_5_9__global-header">
-								<img src="index_files/logo_steam.svg" width="176" height="44">
+                <div id="logoDiv">
+                  <!-- CANVAS 
+                  <canvas id="steamLogoCanvas" style="display: none;">
+                    if you are seeing this text, the canvas was not loaded properly
+                  </canvas>-->
+                  
+                  <!-- SVG -->
+                  <script src="images/logo_steam.js"></script>
+                  
+                  <!-- PNG 
+                  <img src="images/logo_steam.png" id="steamLogoPNG" style="display: none;">-->
+                </div>
 							</a>
 						</span>
 					</div>
@@ -743,7 +756,6 @@
 
 				<div class="game_page_background game"
 					style="background-image: url('https://cdn.cloudflare.steamstatic.com/steam/apps/70/page_bg_generated_v6b.jpg?t=1636588046');">
-
 
 
 					<div class="responsive_store_nav_ctn_spacer">
@@ -1456,9 +1468,31 @@
 									var strRequiredVersion = "9";
 									if (typeof (g_bIsOnMac) != 'undefined' && g_bIsOnMac)
 										strRequiredVersion = "10.1.0";
-
 								</script>
+
 								<div class="game_background_glow">
+
+                  <div id="logo-color-container">
+                    <div class="color-row">
+                      <p>the top color</p>
+                      <input type="color" id="logoColorTop">
+                    </div>
+
+                    <div class="color-row">
+                      <p>the bottom color</p>
+                      <input type="color" id="logoColorBottom">
+                    </div>
+
+                    <div class="color-row">
+                      <p>the handle color</p>
+                      <input type="color" id="logoColor1">
+                    </div>
+
+                    <div class="color-row">
+                      <p>the small circles color</p>
+                      <input type="color" id="logoColor0">
+                    </div>
+                  </div>
 
 									<div class="responsive_page_header_img" style="display: none;">
 										<img style="width:100%;" src="new/header.png">
@@ -3323,6 +3357,10 @@
 			<div class="miniprofile_hover_inner shadow_content"></div>
 		</div>
 		<div id="review_histogram_tooltip"></div>
+
+    <!-- IMPORTANT SCRIPTS -->
+    <script src="js/logoUpdater.js"></script>
+    <script src="js/colorPicker.js"></script>
 </body>
 
 </html>

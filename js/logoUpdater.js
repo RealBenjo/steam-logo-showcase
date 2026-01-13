@@ -1,9 +1,9 @@
 // logo vars
-var size = 36;
-var logoTopColor = "#01050e";
-var logoBottomColor = "#007db2";
-var logoMain0 = "#000000";
-var logoMain1 = "#ffffff";
+var size = 36; // used by canvas only
+var logoTopColor = "#c5c3c0";
+var logoBottomColor = "#c5c3c0";
+var logoMain1 = "#171a21";
+var logoMain0 = "#c5c3c0";
 // suboptimal optimization
 var isImg;
 var isCanvas;

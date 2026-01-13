@@ -5,10 +5,10 @@ const colPickLogo1 = document.getElementById("logoColor1");
 const colPickLogo0 = document.getElementById("logoColor0");
 
 // set default values of the input elements
-colPickLogoTop.value = "#01050e";
-colPickLogoBottom.value = "#007db2";
-colPickLogo1.value = "#ffffff";
-colPickLogo0.value = "#000000";
+colPickLogoTop.value = logoTopColor;
+colPickLogoBottom.value = logoBottomColor;
+colPickLogo1.value = logoMain1;
+colPickLogo0.value = logoMain0;
 
 addEventListener("input", (event) => {
   logoTopColor = colPickLogoTop.value;

@@ -3,6 +3,10 @@
     width: 300px;
     float: left;
 }
+#logo-color-container p {
+    font-size: medium;
+    color: #c8e9e9;
+}
 
 .color-row {
     display: flex;
@@ -11,7 +15,7 @@
     margin-bottom: 10px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1800px) {
     #logo-color-container {
         display: flex;
         flex-direction: row;

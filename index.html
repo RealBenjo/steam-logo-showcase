@@ -138,7 +138,7 @@
                   </div>
                   <div class="responsive_menu_user_wallet">
                     <a href="https://store.steampowered.com/account/?snr=1_5_9__global-responsive-menu">
-                      Wallet <b>(£0.00)</b> </a>
+                      Wallet <b>(€0.00)</b> </a>
                   </div>
                 </div>
               </div>
@@ -322,10 +322,10 @@
           </div>
           <div class="responsive_header_logo">
             <a href="https://store.steampowered.com/?snr=1_5_9__global-responsive-menu">
-              <!-- the canvas logo is here! -->
-              <canvas id="steamLogoCanvas" height="36">
-                if you are seeing this text, the canvas was not loaded properly
-              </canvas>
+              <!-- the svg logo is here! -->
+              <div id="logoDiv">
+                <script src="images/logo_steam.js"></script>
+              </div>
             </a>
           </div>
         </div>
@@ -342,16 +342,16 @@
 
         <div id="global_header" data-panel="{&quot;flow-children&quot;:&quot;row&quot;}">
           <div class="content">
-            <div class="logo">
-              <span id="logo_holder">
-                <a href="https://store.steampowered.com/?snr=1_5_9__global-header">
-                  <!-- the svg logo is here! -->
-                  <div id="logoDiv">
-                    <script src="images/logo_steam.js"></script>
-                  </div>
-                </a>
-              </span>
-            </div>
+            <a href="https://store.steampowered.com/?snr=1_5_9__global-header">
+              <div class="logo content_centered">
+                <div id="logo_holder">
+                  <!-- the canvas logo is here! -->
+                  <canvas id="steamLogoCanvas" height="36">
+                    if you are seeing this text, the canvas was not loaded properly
+                  </canvas>
+                </div>
+              </div>
+            </a>
 
             <div class="supernav_container">
               <a class="menuitem supernav" href="https://store.steampowered.com/?snr=1_5_9__global-header"
@@ -660,7 +660,7 @@
                 </script>
                 <div id="header_wallet_ctn">
                   <a class="global_action_link" id="header_wallet_balance"
-                    href="https://store.steampowered.com/account/store_transactions/">£0.00</a>
+                    href="https://store.steampowered.com/account/store_transactions/">€0.00</a>
                 </div>
               </div>
               <a href="https://steamcommunity.com/id//" class="user_avatar playerAvatar online">
@@ -1490,35 +1490,36 @@
 
                   <div class="game_background_glow">
 
-                    <!-- the color container is here! -->
-                    <div id="logo-color-container">
-                      <div class="color-row">
-                        <p>the top gradient color</p>
-                        <input type="color" id="logoColorTop">
-                      </div>
-
-                      <div class="color-row">
-                        <p>the bottom gradient color</p>
-                        <input type="color" id="logoColorBottom">
-                      </div>
-
-                      <div class="color-row">
-                        <p>the handle color</p>
-                        <input type="color" id="logoColor1">
-                      </div>
-
-                      <div class="color-row">
-                        <p>the small circles color</p>
-                        <input type="color" id="logoColor0">
-                      </div>
-                    </div>
-
                     <div class="responsive_page_header_img" style="display: none;">
                       <img style="width:100%;" src="new/header.png">
                     </div>
 
-                    <div class="block_content page_content" id="game_highlights"
+                    <!-- highlights are here! -->
+                    <div class="block_content page_content" id="game_highlights" 
                       data-panel="{&quot;flow-children&quot;:&quot;column&quot;}">
+                      
+                      <!-- the color container is here! -->
+                      <div id="logo-color-container">
+                        <div class="color-row">
+                          <p>the top gradient color</p>
+                          <input type="color" id="logoColorTop">
+                        </div>
+
+                        <div class="color-row">
+                          <p>the bottom gradient color</p>
+                          <input type="color" id="logoColorBottom">
+                        </div>
+
+                        <div class="color-row">
+                          <p>the handle color</p>
+                          <input type="color" id="logoColor1">
+                        </div>
+
+                        <div class="color-row">
+                          <p>the small circles color</p>
+                          <input type="color" id="logoColor0">
+                        </div>
+                      </div>
 
                       <div class="rightcol"
                         data-panel="{&quot;flow-children&quot;:&quot;column&quot;}">
@@ -2725,7 +2726,7 @@
                           <div class="game_purchase_action">
                             <div class="game_purchase_action_bg">
                               <div class="game_purchase_price price" data-price-final="1949">
-                                £7.99 </div>
+                                €7.99 </div>
                               <div class="btn_addtocart">
                                 <a data-panel="{&quot;autoFocus&quot;:true,&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}"
                                   class="btn_green_steamui btn_medium"
@@ -2821,7 +2822,6 @@
                             Escape from Locke Manor, or learn the fate that awaits you. Once you get out of the house, will you be free?
                             
                             <br><br>
-                            <!-- fixed the gifs being too wide for phone here! -->
                             <img src="new/gifs/1.gif">
 
                             <br><br>
@@ -2962,7 +2962,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="1139">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">£11.39</div>
+                                  <div class="discount_final_price">€11.39</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -2977,7 +2977,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="3999">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">£39.99</div>
+                                  <div class="discount_final_price">€39.99</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3006,7 +3006,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="1999">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">£19.99</div>
+                                  <div class="discount_final_price">€19.99</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3020,7 +3020,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="2499">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">£24.99</div>
+                                  <div class="discount_final_price">€24.99</div>
                                 </div>
                               </div>
                               <div class="ds_flag ds_owned_flag">IN LIBRARY&nbsp;&nbsp;</div>
@@ -3035,7 +3035,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="399">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">£3.99</div>
+                                  <div class="discount_final_price">€3.99</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3049,7 +3049,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="2379">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">£23.79</div>
+                                  <div class="discount_final_price">€23.79</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3063,7 +3063,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="3599">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">£35.99</div>
+                                  <div class="discount_final_price">€35.99</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3077,7 +3077,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="1599">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">£15.99</div>
+                                  <div class="discount_final_price">€15.99</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3091,7 +3091,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="1549">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">£15.49</div>
+                                  <div class="discount_final_price">€15.49</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3106,7 +3106,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="699">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">£6.99</div>
+                                  <div class="discount_final_price">€6.99</div>
                                 </div>
                               </div>
                               <div class="ds_flag ds_wishlist_flag">ON WISHLIST&nbsp;&nbsp;

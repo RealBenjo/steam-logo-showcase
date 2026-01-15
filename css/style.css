@@ -9,43 +9,27 @@
 
 #logo-color-container {
     background-color: rgba(29, 58, 76, 0.5);
+
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 20px;
+
     width: 100%;
-    float: left;
-}
-#logo-color-container p {
-    font-size: medium;
-    color: #c8e9e9;
+    float: none;
 }
 
 .color-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-
-    padding: 0 20%;
+    margin: 0 auto;
+    padding: 0;
 }
 
 @media (max-width: 1800px) {
     #logo-color-container {
         background-color: transparent;
-
-        display: flex;
-        flex-direction: row;
-        margin: 0 auto;
-        padding: 20px;
-
-        width: 85%;
-        float: none;
     }
 
-    .color-row {
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
-        padding: 0;
-    }
-    .color-row p {
-        display: none;
-    }
+    
 }

@@ -1,5 +1,5 @@
 // logo vars
-var size = 36; // used by canvas only
+var size = 50; // used by canvas only
 var logoTopColor = "#c5c3c0";
 var logoBottomColor = "#c5c3c0";
 var logoMain1 = "#171a21";
@@ -15,9 +15,6 @@ const handles = document.getElementById("handles");
 const outer_section = document.getElementById("outer_section");
 const topGradColor = document.getElementById("topSvgColor");
 const bottomGradColor = document.getElementById("bottomSvgColor");
-
-// png element
-const steam_logo_png = document.getElementById("steamLogoPNG");
 
 function updateSVG() {
   const svg = document.getElementById("steamLogoSVG");

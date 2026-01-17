@@ -320,14 +320,19 @@
               </div>
             </div>
           </div>
-          <div class="responsive_header_logo">
-            <a href="https://store.steampowered.com/?snr=1_5_9__global-responsive-menu">
-
+          <div id="svg_logo_holder" class="responsive_header_logo">
               <!-- the svg logo is here! -->
               <div id="logoDiv">
                 <script src="images/logo_steam.js"></script>
               </div>
-            </a>
+
+              <!-- the color container is here! -->
+              <div id="logo-color-container">
+                <input type="color" id="moblLogoColorTop" class="color_picker color1_mobile">
+                <input type="color" id="moblLogoColorBottom" class="color_picker color2_mobile">
+                <input type="color" id="moblLogoColor1" class="color_picker color3_mobile">
+                <input type="color" id="moblLogoColor0" class="color_picker color4_mobile">
+              </div>
           </div>
         </div>
       </div>
@@ -340,20 +345,26 @@
       </div>
 
       <div class="responsive_page_content">
-
         <div id="global_header" data-panel="{&quot;flow-children&quot;:&quot;row&quot;}">
           <div class="content">
-            <a href="https://store.steampowered.com/?snr=1_5_9__global-header">
-              <div class="logo content_centered">
-                <div id="logo_holder">
+            <div class="logo content_centered">
+              <div id="canvas_logo_holder">
 
-                  <!-- the canvas logo is here! -->
-                  <canvas id="steamLogoCanvas" height="36">
-                    if you are seeing this text, the canvas was not loaded properly
-                  </canvas>
+                <!-- the canvas logo is here! -->
+                <canvas id="steamLogoCanvas">
+                  if you are seeing this text, the canvas was not loaded properly
+                </canvas>
+
+                <!-- the color container is here! -->
+                <div id="logo-color-container">
+                  <input type="color" id="deskLogoColorTop" class="color_picker color1_desktop">
+                  <input type="color" id="deskLogoColorBottom" class="color_picker color2_desktop">
+                  <input type="color" id="deskLogoColor1" class="color_picker color3_desktop">
+                  <input type="color" id="deskLogoColor0" class="color_picker color4_desktop">
                 </div>
+
               </div>
-            </a>
+            </div>
 
             <div class="supernav_container">
               <a class="menuitem supernav" href="https://store.steampowered.com/?snr=1_5_9__global-header"
@@ -1496,28 +1507,8 @@
                       <img style="width:100%;" src="new/header.png">
                     </div>
 
-                    <!-- highlights are here! -->
                     <div class="block_content page_content" id="game_highlights" 
                       data-panel="{&quot;flow-children&quot;:&quot;column&quot;}">
-                      
-                      <!-- the color container is here! -->
-                      <div id="logo-color-container">
-                        <div class="color-row">
-                          <input type="color" id="logoColorTop">
-                        </div>
-
-                        <div class="color-row">
-                          <input type="color" id="logoColorBottom">
-                        </div>
-
-                        <div class="color-row">
-                          <input type="color" id="logoColor1">
-                        </div>
-
-                        <div class="color-row">
-                          <input type="color" id="logoColor0">
-                        </div>
-                      </div>
 
                       <div class="rightcol"
                         data-panel="{&quot;flow-children&quot;:&quot;column&quot;}">

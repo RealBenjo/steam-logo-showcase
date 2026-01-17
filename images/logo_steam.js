@@ -173,4 +173,4 @@ const LogoSVGCode = `
                266.39,998.03 71.49,830.98 23.00,654.00 Z" />
     </svg>
     `;
-document.getElementById("logoDiv").insertAdjacentHTML('beforeend', LogoSVGCode);
+document.getElementById("logoDiv").innerHTML = LogoSVGCode;

@@ -1,6 +1,10 @@
 .pagecontent {
     margin: 0 auto;
 }
+.logo {
+    height: auto !important;
+    margin-right: 0 !important;
+}
 .content_centered {
     display: flex;
     justify-content: center;
@@ -8,8 +12,6 @@
 }
 
 #logo-color-container {
-    background-color: rgba(29, 58, 76, 0.5);
-
     display: flex;
     flex-direction: row;
     margin: 0 auto;
@@ -19,17 +21,64 @@
     float: none;
 }
 
-.color-row {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0;
+.color_picker {
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    opacity: 0;
 }
 
-@media (max-width: 1800px) {
-    #logo-color-container {
-        background-color: transparent;
-    }
+/* desktop styling */
+.color1_desktop {
+    top: 24px;
+    left: 57px;
+    width: 60px;
+    height: 21px;
+}
+.color2_desktop {
+    top: 65px;
+    left: 57px;
+    width: 60px;
+    height: 17px;
+}
+.color3_desktop {
+    top: 44px;
+    left: 57px;
+    width: 31px;
+    height: 22px;
+}
+.color4_desktop {
+    top: 44px;
+    left: 87px;
+    height: 22px;
+    width: 30px;
+}
 
-    
+/* mobile styling */
+.color1_mobile {
+    top: 6%;
+    left: 45%;
+    width: 10%;
+    height: 18%;
+}
+.color2_mobile {
+    top: 37%;
+    left: 45%;
+    width: 10%;
+    height: 17%;
+}
+.color3_mobile {
+    top: 23%;
+    left: 45%;
+    width: 5%;
+    height: 15%;
+}
+.color4_mobile {
+    top: 23%;
+    left: 50%;
+    height: 15%;
+    width: 5%;
+}
+
+@media (max-width: 500px) {
 }

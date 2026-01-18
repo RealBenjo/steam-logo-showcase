@@ -1,4 +1,4 @@
-// color picker elements in enum
+// color picker elements in array
 const colorInputs = {
   top: [
     document.getElementById("deskLogoColorTop"),
@@ -24,24 +24,28 @@ colorInputs.bottom.forEach(picker => picker.value = logoBottomColor);
 colorInputs.main1.forEach(picker => picker.value = logoMain1);
 colorInputs.main0.forEach(picker => picker.value = logoMain0);
 
-function syncColorPickers() {
-  // foreach simply loops through entire array, i being each element inside the array
-  colorInputs.top.forEach(i => i.value = logoTopColor);
-  colorInputs.bottom.forEach(i => i.value = logoBottomColor);
-  colorInputs.main1.forEach(i => i.value = logoMain1);
-  colorInputs.main0.forEach(i => i.value = logoMain0);
-}
+// the VERY important event listener
+addEventListener("input", (event) => {
+  onColorInput(event);
+});
+
 
 function onColorInput(e) {
-  const value = e.target.value;
+  // target is the element that triggered the event
+  const eventElement = e.target;
+  const value = eventElement.value;
 
-  if (colorInputs.top.includes(e.target)) {
+  // check which input triggered the event and update the corresponding color variable
+  if (colorInputs.top.includes(eventElement)) {
     logoTopColor = value;
-  } else if (colorInputs.bottom.includes(e.target)) {
+
+  } else if (colorInputs.bottom.includes(eventElement)) {
     logoBottomColor = value;
-  } else if (colorInputs.main1.includes(e.target)) {
+
+  } else if (colorInputs.main1.includes(eventElement)) {
     logoMain1 = value;
-  } else if (colorInputs.main0.includes(e.target)) {
+    
+  } else if (colorInputs.main0.includes(eventElement)) {
     logoMain0 = value;
   }
 
@@ -53,7 +57,12 @@ function onColorInput(e) {
   updateSVG();
 }
 
-addEventListener("input", (event) => {
-  onColorInput(event);
-});
 
+// AUX //
+function syncColorPickers() {
+  // foreach simply loops through entire array, i being each element inside the array
+  colorInputs.top.forEach(i => i.value = logoTopColor);
+  colorInputs.bottom.forEach(i => i.value = logoBottomColor);
+  colorInputs.main1.forEach(i => i.value = logoMain1);
+  colorInputs.main0.forEach(i => i.value = logoMain0);
+}

@@ -337,13 +337,6 @@
         </div>
       </div>
 
-      <div class="responsive_page_content_overlay">
-
-      </div>
-
-      <div class="responsive_fixonscroll_ctn nonresponsive_hidden ">
-      </div>
-
       <div class="responsive_page_content">
         <div id="global_header" data-panel="{&quot;flow-children&quot;:&quot;row&quot;}">
           <div class="content">
@@ -682,37 +675,14 @@
             </div>
           </div>
         </div>
+
         <div id="responsive_store_nav_ctn"></div>
         <div id="responsive_store_nav_overlay" style="display:none;">
           <div id="responsive_store_nav_overlay_ctn"></div>
           <div id="responsive_store_nav_overlay_bottom"></div>
         </div>
         <div data-cart-banner-spot="1"></div>
-        <div class="responsive_page_template_content" data-panel="{&quot;autoFocus&quot;:true}">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <div id="responsive_page_template_content" class="responsive_page_template_content" data-panel="{&quot;autoFocus&quot;:true}">
 
           <!-- A LOT OF SCRIPTS -->
           <script type="text/javascript">
@@ -2717,12 +2687,11 @@
                               <div class="game_purchase_price price" data-price-final="1949">
                                 €7.99 </div>
                               <div class="btn_addtocart">
-                                <a data-panel="{&quot;autoFocus&quot;:true,&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}"
+                                <button onclick="changePage('purchase_page_main')"
                                   class="btn_green_steamui btn_medium"
-                                  href="javascript:addToCart(70);"
                                   id="btn_add_to_cart_70">
                                   <span>Add to Cart</span>
-                                </a>
+                                </button>
 
                               </div>
                             </div>
@@ -3352,23 +3321,64 @@
         </div> <!-- responsive_page_content -->
 
       </div> <!-- responsive_page_frame -->
+    </div>
 
-      <div class="miniprofile_hover" style="display: none;">
-        <div class="shadow_ul"></div>
-        <div class="shadow_top"></div>
-        <div class="shadow_ur"></div>
-        <div class="shadow_left"></div>
-        <div class="shadow_right"></div>
-        <div class="shadow_bl"></div>
-        <div class="shadow_bottom"></div>
-        <div class="shadow_br"></div>
-        <div class="miniprofile_hover_inner shadow_content"></div>
+    <!-- purchase content is here! -->
+    <div id="purchase_page_main" style="display: none;">
+      <div id="purchase_area" class="centered_div">
+        <div id="shopping_cart_div">
+          congrats you are in the shopping cart
+        </div>
+
+        <div id="purchase_area_flexed" class="centered_div">
+          <div id="left_purchase_area">
+            <div id="top_purchase_area">
+              <div id="item_for_purchase">
+                <div id="img_div">
+
+                </div>
+
+                <div id="options_div">
+                
+                </div>
+              </div>
+
+              <div id="continue_to_div">
+                <button id="continue_shopping">Continue shopping</button>
+                <button id="continue_to_payment">Continue to payment</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="right_purchase_area">
+            <div id="purchase_item">
+
+            </div>
+            <div id="purchase_warning">
+              you buy a digital license through steam
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="review_histogram_tooltip"></div>
+    </div>
 
-      <!-- IMPORTANT SCRIPTS here! -->
-      <script src="js/logoUpdater.js"></script>
-      <script src="js/colorPicker.js"></script>
+    <div class="miniprofile_hover" style="display: none;">
+      <div class="shadow_ul"></div>
+      <div class="shadow_top"></div>
+      <div class="shadow_ur"></div>
+      <div class="shadow_left"></div>
+      <div class="shadow_right"></div>
+      <div class="shadow_bl"></div>
+      <div class="shadow_bottom"></div>
+      <div class="shadow_br"></div>
+      <div class="miniprofile_hover_inner shadow_content"></div>
+    </div>
+    <div id="review_histogram_tooltip"></div>
+
+    <!-- IMPORTANT SCRIPTS here! -->
+    <script src="js/logoUpdater.js"></script>
+    <script src="js/colorPicker.js"></script>
+    <script src="js/pageChanger.js"></script>
 </body>
 
 </html>

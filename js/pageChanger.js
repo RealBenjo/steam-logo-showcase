@@ -15,3 +15,7 @@ function changePage(pageID) {
 
   console.log(pageToShow);
 }
+
+function GoToAppPage() {
+  
+}

@@ -92,13 +92,13 @@
 
 /* purchase page is here! */
 #purchase_page_main {
-    margin-top: 20px;
+    margin-top: 100px;
     width: 100vw;
-    height: calc(100vh - 104px); /* 104px is the header */
+    height: calc(100vh - 104px - 100px); /* 104px is the header, 100px is the margin-top */
 }
 #purchase_area {
-    width: 1300px;
-    height: 550px;
+    width: 1200px;
+    height: 600px;
 }
 #shopping_cart_div {
     width: 100%;
@@ -111,36 +111,159 @@
 
 #left_purchase_area {
     float: left;
-    width: 60%;
+    width: 65%;
     height: 100%;
-}
-#top_purchase_area {
-    width: 100%;
-    height: 50%;
 }
 #item_for_purchase {
     padding: 20px;
-    height: 50%;
+    height: 20%;
+    background-color: #152130;
 }
 #img_div {
+    height: 100%;
     float: left;
     width: 30%;
+
+    display: flex;
+    align-items: center;
 }
 #options_div {
     float: left;
-    width: 70%;
+    width: 67%;
     height: 100%;
+    padding-left: 3%;
+}
+#purchase_option {
+    width: 190px;
+    height: 27px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #28313b;
+    color: #fff;
+    opacity: 0.7;
+}
+#continue_to_div {
+    margin-top: 20px;
+}
+#purchase_recommendations {
+    margin-top: 100px;
+}
+#recommended_apps {
+    margin-top: 20px;
+    width: 100%;
+    height: 150px;
 }
 
 #right_purchase_area {
     float: right;
-    width: 40%;
+    width: 35%;
     height: 100%;
+    background-color: #1a2634;
+}
+#purchase_item {
+    background-color: #162130;
+    padding: 0 20px;
+}
+#estimated_total {
+    padding-top: 20px;
+}
+#sales_tax_div {
+    margin-top: 10px;
+}
+#purchase_div {
+    margin-top: 10px;
+}
+#purchase_warning {
+    margin: 0 20px;
+}
+#fancy_p {
+    font-size: 15px;
+    line-height: 18px;
+    color: #c6d4df;
+    font-weight: 300;
+    margin-bottom: 8px;
 }
 
-/* 170px */
 
+.black {
+    background-color: black;
+}
+.price_box {
+    background-color: #334553;
+    padding: 0 20px;
+    color: #beee11;
+    font-size: 16px;
+}
+.recommend_price {
+    width: 50%;
+}
+.recommend_app {
+    background-color: black;
+    padding-left: 10px;
+    height: 38px;
+}
+.width100 {
+    width: 100%;
+}
+.width50 {
+    width: 50%;
+}
+.height100 {
+    height: 100%;
+}
+.recom_h3 {
+    font-size: large !important;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+.default_button {
+    background-color: #3d4450;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.default_button:hover {
+    filter: brightness(110%);
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
 
+    transition: all 0.3s ease; /* just a little transition */
+}
+.lively_button {
+    background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+    background-size: auto;
+    background-size: 330% 100%;
+}
+.dull_link {
+    color: #5a6979;
+    cursor: pointer;
+}
+.dull_link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.underlined {
+    text-decoration: underline;
+}
+.width_90 {
+    width: 90%;
+    height: 100%;
+}
+.space_between {
+    display: flex;
+    justify-content: space-between;
+}
+.vertical_align {
+    display: flex;
+    align-items: center;
+}
 .third_height{
     height: 33%;
 }
@@ -153,5 +276,33 @@
     align-items: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1300px) {
+    #purchase_area {
+        width: 900px;
+    }
+    #left_purchase_area {
+        width: 100%;
+    }
+    #right_purchase_area {
+        width: 100%;
+    }
+    .width_90 {
+        width: 100%;
+    }
+}
+@media (max-width: 1000px) {
+    #purchase_area {
+        width: 90%;
+    }
+    #item_for_purchase {
+        height: 600px;
+    }
+    #img_div {
+        width: 100%;
+        height: 100%;
+    }
+    #app_image {
+        width: 100%;
+        height: 50%;
+    }
 }

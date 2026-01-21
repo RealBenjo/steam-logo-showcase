@@ -138,7 +138,7 @@
                   </div>
                   <div class="responsive_menu_user_wallet">
                     <a href="https://store.steampowered.com/account/?snr=1_5_9__global-responsive-menu">
-                      Wallet <b>(€0.00)</b> </a>
+                      Wallet <b>(0.00€)</b> </a>
                   </div>
                 </div>
               </div>
@@ -666,7 +666,7 @@
                 </script>
                 <div id="header_wallet_ctn">
                   <a class="global_action_link" id="header_wallet_balance"
-                    href="https://store.steampowered.com/account/store_transactions/">€0.00</a>
+                    href="https://store.steampowered.com/account/store_transactions/">0.00€</a>
                 </div>
               </div>
               <a href="https://steamcommunity.com/id//" class="user_avatar playerAvatar online">
@@ -2685,9 +2685,9 @@
                           <div class="game_purchase_action">
                             <div class="game_purchase_action_bg">
                               <div class="game_purchase_price price" data-price-final="1949">
-                                €7.99 </div>
+                                7.99€ </div>
                               <div class="btn_addtocart">
-                                <button onclick="changePage('purchase_page_main')"
+                                <button onclick="changePage()"
                                   class="btn_green_steamui btn_medium"
                                   id="btn_add_to_cart_70">
                                   <span>Add to Cart</span>
@@ -2920,7 +2920,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="1139">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€11.39</div>
+                                  <div class="discount_final_price">11.39€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -2935,7 +2935,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="3999">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€39.99</div>
+                                  <div class="discount_final_price">39.99€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -2964,7 +2964,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="1999">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€19.99</div>
+                                  <div class="discount_final_price">19.99€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -2978,7 +2978,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="2499">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€24.99</div>
+                                  <div class="discount_final_price">24.99€</div>
                                 </div>
                               </div>
                               <div class="ds_flag ds_owned_flag">IN LIBRARY&nbsp;&nbsp;</div>
@@ -2993,7 +2993,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="399">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€3.99</div>
+                                  <div class="discount_final_price">3.99€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3007,7 +3007,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="2379">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€23.79</div>
+                                  <div class="discount_final_price">23.79€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3021,7 +3021,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="3599">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€35.99</div>
+                                  <div class="discount_final_price">35.99€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3035,7 +3035,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="1599">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€15.99</div>
+                                  <div class="discount_final_price">15.99€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3049,7 +3049,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="1549">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€15.49</div>
+                                  <div class="discount_final_price">15.49€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3064,7 +3064,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="699">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€6.99</div>
+                                  <div class="discount_final_price">6.99€</div>
                                 </div>
                               </div>
                               <div class="ds_flag ds_wishlist_flag">ON WISHLIST&nbsp;&nbsp;
@@ -3321,62 +3321,128 @@
         </div> <!-- responsive_page_content -->
 
       </div> <!-- responsive_page_frame -->
-    </div>
 
     <!-- purchase content is here! -->
     <div id="purchase_page_main" style="display: none;">
       <div id="purchase_area" class="centered_div">
         <div id="shopping_cart_div">
-          congrats you are in the shopping cart
+          <div style="height: 1px;"></div> <!-- why does this work :( -->
+
+          <div>
+            <a onclick="GoToAppPage('purchase_page_main');" style="cursor: pointer; left: 0;">Home</a>
+            <p style="display: inline-block; opacity: 0.5; left: 0;"> > Your Shopping Cart</p>
+          </div>
+          
+          <h3 style="font-weight: bold;">Your Shopping Cart</h3>
         </div>
 
         <div id="purchase_area_flexed" class="centered_div">
           <div id="left_purchase_area">
-            <div id="top_purchase_area">
+            <div class="width_90">
               <div id="item_for_purchase">
                 <div id="img_div">
-                  <img src="new/header.png" width="200" onclick="GoToAppPage();" style="cursor: pointer;"> <!-- implement this -->
+                  <img id="app_image" src="new/header.png" width="200" height="93" onclick="GoToAppPage();" style="cursor: pointer;"> <!-- implement this -->
                 </div>
 
                 <div id="options_div">
-                  <div id="app_name">
-                    <p>A Night At Locke Manor</p>
+                  <div id="app_name" class="third_height vertical_align space_between">
+                    <h3>A Night At Locke Manor</h3>
                   </div>
                   
-                  <div id="os_n_price">
-                    <p style="float: left;">windows</p>
-                    <p style="float: right;">€7.99</p>
+                  <div id="os_n_price" class="third_height vertical_align space_between">
+                    <span style="background-image: url( 'public/images/v6/icon_platform_win.png'); width: 20px; height: 20px;"></span>
+                    <p>7.99€</p>
                   </div>
 
-                  <div id="cart_functions">
-                    <select name="cars" id="cars" style="float: left; width: 100px;">
-                      <option value="volvo">Volvo</option>
-                      <option value="saab">Saab</option>
-                      <option value="mercedes">Mercedes</option>
-                      <option value="audi">Audi</option>
+                  <div id="cart_functions" class="third_height vertical_align space_between">
+                    <select name="purchase_option" id="purchase_option" style="cursor: pointer;">
+                      <option value="FMA">For my account</option>
+                      <option value="FMAP">For my account: private</option>
+                      <option value="GIFT">This is a gift</option>
                     </select>
 
-                    <div style="float: right;">
-                      <a>Add</a> |  
-                      <a>Remove</a>  
+                    <div>
+                      <a class="underlined dull_link">Add</a> <p style="color: #5a6979; display: inline;">|</p>
+                      <a class="underlined dull_link">Remove</a>  
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div id="continue_to_div">
-                <button id="continue_shopping">Continue shopping</button>
-                <button id="continue_to_payment">Continue to payment</button>
+              <div id="continue_to_div" class="vertical_align space_between">
+                <div>
+                  <button id="continue_shopping" class="default_button">Continue shopping</button>
+                  <button id="continue_to_payment" class="default_button lively_button">Continue to payment</button>
+                </div>
+                <a class="underlined dull_link">Remove all items</a>
+              </div>
+
+              <div id="purchase_recommendations">
+                <div><h3 class="recom_h3">Recommendations for you</h3></div>
+
+                <div id="recommended_apps" class="vertical_align space_between">
+                  <div id="app1" class="height100">
+                    <div class="black">
+                      <img src="index_files/capsule_184x69_017.jpg" width="220px">
+                      <div class="recommend_app vertical_align space_between">
+                        <span style="background-image: url( 'public/images/v6/icon_platform_win.png'); width: 20px; height: 20px;"></span>
+                        <div class="price_box height100 vertical_align">Free</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="app2" class="height100">
+                    <div class="black">
+                      <img src="index_files/capsule_184x69_020.jpg" width="220px">
+                      <div class="recommend_app vertical_align space_between">
+                        <span style="background-image: url( 'public/images/v6/icon_platform_win.png'); width: 20px; height: 20px;"></span>
+                        <div class="price_box height100 vertical_align">11.39€</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="app3" class="height100">
+                    <div class="black">
+                      <img src="index_files/capsule_184x69_023.jpg"width="220px">
+                      <div class="recommend_app vertical_align space_between">
+                        <span style="background-image: url( 'public/images/v6/icon_platform_win.png'); width: 20px; height: 20px;"></span>
+                        <div class="price_box height100 vertical_align">39.99€</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <div id="right_purchase_area">
-            <div id="purchase_item">
+            <div>
+              <div id="purchase_item">
+                <div id="estimated_total" class="vertical_align space_between">
+                  <p style="display: inline; font-size: 15px; color: #fff;">Estimated total</p>
+                  <p style="display: inline; font-size: 17px; font-weight: bold; color: #fff;">7.99€</p>
+                </div>
 
-            </div>
-            <div id="purchase_warning">
-              you buy a digital license through steam
+                <div id="sales_tax_div">
+                  <p>Sales tax will be calculated during checkout where applicable</p>
+                </div>
+
+                <div id="purchase_div">
+                  <button class="default_button lively_button width100">Continue to payment</button>
+                </div>
+
+                <div style="height: 20px;">
+                  
+                </div>
+              </div>
+
+              <div id="purchase_warning">
+                <img src="images/computer.png" width="100%" alt="steam computer">
+
+                <p id="fancy_p">A purchase of a digital product grants a license for the product on Steam.</p>
+                <p style="display: inline;">For full terms and conditions, please see the </p>
+                <a href="https://store.steampowered.com/subscriber_agreement/">Steam Subscriber Agreement</a>
+              </div>
             </div>
           </div>
         </div>

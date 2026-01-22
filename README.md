@@ -68,3 +68,7 @@
   <p>
     No game is sold, no downloads exist, and no commercial intent is involved.
   </p>
+
+  <h2>Credit</h2>
+  <p>This site is mostly made by: Juan Uys.</p>
+  <p>you can see his previous commits from his source</p>

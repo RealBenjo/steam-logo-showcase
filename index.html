@@ -138,7 +138,7 @@
                   </div>
                   <div class="responsive_menu_user_wallet">
                     <a href="https://store.steampowered.com/account/?snr=1_5_9__global-responsive-menu">
-                      Wallet <b>(€0.00)</b> </a>
+                      Wallet <b>(0.00€)</b> </a>
                   </div>
                 </div>
               </div>
@@ -320,40 +320,44 @@
               </div>
             </div>
           </div>
-          <div class="responsive_header_logo">
-            <a href="https://store.steampowered.com/?snr=1_5_9__global-responsive-menu">
-
+          <div id="svg_logo_holder" class="responsive_header_logo">
               <!-- the svg logo is here! -->
               <div id="logoDiv">
                 <script src="images/logo_steam.js"></script>
               </div>
-            </a>
+
+              <!-- the color container is here! -->
+              <div id="logo-color-container">
+                <input type="color" id="moblLogoColorTop" class="color_picker color1_mobile">
+                <input type="color" id="moblLogoColorBottom" class="color_picker color2_mobile">
+                <input type="color" id="moblLogoColor1" class="color_picker color3_mobile">
+                <input type="color" id="moblLogoColor0" class="color_picker color4_mobile">
+              </div>
           </div>
         </div>
       </div>
 
-      <div class="responsive_page_content_overlay">
-
-      </div>
-
-      <div class="responsive_fixonscroll_ctn nonresponsive_hidden ">
-      </div>
-
       <div class="responsive_page_content">
-
         <div id="global_header" data-panel="{&quot;flow-children&quot;:&quot;row&quot;}">
           <div class="content">
-            <a href="https://store.steampowered.com/">
-              <div class="logo content_centered">
-                <div id="logo_holder">
+            <div class="logo content_centered">
+              <div id="canvas_logo_holder">
 
-                  <!-- the canvas logo is here! it's size is in logoUpdater.js -->
-                  <canvas id="steamLogoCanvas">
-                    if you are seeing this text, the canvas was not loaded properly
-                  </canvas>
+                <!-- the canvas logo is here! -->
+                <canvas id="steamLogoCanvas">
+                  if you are seeing this text, the canvas was not loaded properly
+                </canvas>
+
+                <!-- the color container is here! -->
+                <div id="logo-color-container">
+                  <input type="color" id="deskLogoColorTop" class="color_picker color1_desktop">
+                  <input type="color" id="deskLogoColorBottom" class="color_picker color2_desktop">
+                  <input type="color" id="deskLogoColor1" class="color_picker color3_desktop">
+                  <input type="color" id="deskLogoColor0" class="color_picker color4_desktop">
                 </div>
+
               </div>
-            </a>
+            </div>
 
             <div class="supernav_container">
               <a class="menuitem supernav" href="https://store.steampowered.com/"
@@ -662,7 +666,7 @@
                 </script>
                 <div id="header_wallet_ctn">
                   <a class="global_action_link" id="header_wallet_balance"
-                    href="https://store.steampowered.com/account/store_transactions/">€0.00</a>
+                    href="https://store.steampowered.com/account/store_transactions/">0.00€</a>
                 </div>
               </div>
               <a href="https://steamcommunity.com/id//" class="user_avatar playerAvatar online">
@@ -671,37 +675,14 @@
             </div>
           </div>
         </div>
+
         <div id="responsive_store_nav_ctn"></div>
         <div id="responsive_store_nav_overlay" style="display:none;">
           <div id="responsive_store_nav_overlay_ctn"></div>
           <div id="responsive_store_nav_overlay_bottom"></div>
         </div>
         <div data-cart-banner-spot="1"></div>
-        <div class="responsive_page_template_content" data-panel="{&quot;autoFocus&quot;:true}">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <div id="responsive_page_template_content" class="responsive_page_template_content" data-panel="{&quot;autoFocus&quot;:true}">
 
           <!-- A LOT OF SCRIPTS -->
           <script type="text/javascript">
@@ -1498,25 +1479,6 @@
 
                     <div class="block_content page_content" id="game_highlights" 
                       data-panel="{&quot;flow-children&quot;:&quot;column&quot;}">
-                      
-                      <!-- the color container is here! -->
-                      <div id="logo-color-container">
-                        <div class="color-row">
-                          <input type="color" id="logoColorTop">
-                        </div>
-
-                        <div class="color-row">
-                          <input type="color" id="logoColorBottom">
-                        </div>
-
-                        <div class="color-row">
-                          <input type="color" id="logoColor1">
-                        </div>
-
-                        <div class="color-row">
-                          <input type="color" id="logoColor0">
-                        </div>
-                      </div>
 
                       <div class="rightcol"
                         data-panel="{&quot;flow-children&quot;:&quot;column&quot;}">
@@ -2723,15 +2685,13 @@
                           <div class="game_purchase_action">
                             <div class="game_purchase_action_bg">
                               <div class="game_purchase_price price" data-price-final="1949">
-                                €7.99 </div>
+                                7.99€ </div>
                               <div class="btn_addtocart">
-                                <a data-panel="{&quot;autoFocus&quot;:true,&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}"
+                                <button onclick="changePage()"
                                   class="btn_green_steamui btn_medium"
-                                  href="javascript:addToCart(70);"
                                   id="btn_add_to_cart_70">
                                   <span>Add to Cart</span>
-                                </a>
-
+                                </button>
                               </div>
                             </div>
                           </div>
@@ -2959,7 +2919,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="1139">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€11.39</div>
+                                  <div class="discount_final_price">11.39€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -2974,7 +2934,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="3999">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€39.99</div>
+                                  <div class="discount_final_price">39.99€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3003,7 +2963,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="1999">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€19.99</div>
+                                  <div class="discount_final_price">19.99€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3017,7 +2977,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="2499">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€24.99</div>
+                                  <div class="discount_final_price">24.99€</div>
                                 </div>
                               </div>
                               <div class="ds_flag ds_owned_flag">IN LIBRARY&nbsp;&nbsp;</div>
@@ -3032,7 +2992,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="399">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€3.99</div>
+                                  <div class="discount_final_price">3.99€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3046,7 +3006,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="2379">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€23.79</div>
+                                  <div class="discount_final_price">23.79€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3060,7 +3020,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="3599">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€35.99</div>
+                                  <div class="discount_final_price">35.99€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3074,7 +3034,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="1599">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€15.99</div>
+                                  <div class="discount_final_price">15.99€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3088,7 +3048,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="1549">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€15.49</div>
+                                  <div class="discount_final_price">15.49€</div>
                                 </div>
                               </div>
                               <div class="ds_options">
@@ -3103,7 +3063,7 @@
                               <div class="discount_block  no_discount discount_block_inline"
                                 data-price-final="699">
                                 <div class="discount_prices">
-                                  <div class="discount_final_price">€6.99</div>
+                                  <div class="discount_final_price">6.99€</div>
                                 </div>
                               </div>
                               <div class="ds_flag ds_wishlist_flag">ON WISHLIST&nbsp;&nbsp;
@@ -3361,22 +3321,150 @@
 
       </div> <!-- responsive_page_frame -->
 
-      <div class="miniprofile_hover" style="display: none;">
-        <div class="shadow_ul"></div>
-        <div class="shadow_top"></div>
-        <div class="shadow_ur"></div>
-        <div class="shadow_left"></div>
-        <div class="shadow_right"></div>
-        <div class="shadow_bl"></div>
-        <div class="shadow_bottom"></div>
-        <div class="shadow_br"></div>
-        <div class="miniprofile_hover_inner shadow_content"></div>
-      </div>
-      <div id="review_histogram_tooltip"></div>
+    <!-- purchase content is here! -->
+    <div id="purchase_page_main" style="display: none;">
+      <div id="purchase_area" class="centered_div">
+        <div id="shopping_cart_div">
+          <div style="height: 1px;"></div> <!-- why does this work :( -->
 
-      <!-- IMPORTANT SCRIPTS here! -->
-      <script src="js/logoUpdater.js"></script>
-      <script src="js/colorPicker.js"></script>
+          <div>
+            <a onclick="GoToAppPage('purchase_page_main');" style="cursor: pointer; left: 0;">Home</a>
+            <p style="display: inline-block; opacity: 0.5; left: 0;"> > Your Shopping Cart</p>
+          </div>
+          
+          <h3 style="font-weight: bold;">Your Shopping Cart</h3>
+        </div>
+
+        <div id="purchase_area_flexed" class="centered_div">
+          <div id="left_purchase_area">
+            <div class="width_90">
+              <div id="item_for_purchase">
+                <div id="img_div">
+                  <img id="app_image" src="new/header.png" width="200" height="93" onclick="GoToAppPage();" style="cursor: pointer;"> <!-- implement this -->
+                </div>
+
+                <div id="options_div">
+                  <div id="app_name" class="third_height vertical_align space_between">
+                    <h3>A Night At Locke Manor</h3>
+                  </div>
+                  
+                  <div id="os_n_price" class="third_height vertical_align space_between">
+                    <span style="background-image: url( 'public/images/v6/icon_platform_win.png'); width: 20px; height: 20px;"></span>
+                    <p>7.99€</p>
+                  </div>
+
+                  <div id="cart_functions" class="third_height vertical_align space_between">
+                    <select name="purchase_option" id="purchase_option" style="cursor: pointer;">
+                      <option value="FMA">For my account</option>
+                      <option value="FMAP">For my account: private</option>
+                      <option value="GIFT">This is a gift</option>
+                    </select>
+
+                    <div>
+                      <a class="underlined dull_link">Add</a> <p style="color: #5a6979; display: inline;">|</p>
+                      <a class="underlined dull_link">Remove</a>  
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="continue_to_div" class="vertical_align space_between">
+                <div>
+                  <button id="continue_shopping" class="default_button">Continue shopping</button>
+                  <button id="continue_to_payment" class="default_button lively_button">Continue to payment</button>
+                </div>
+                <a class="underlined dull_link">Remove all items</a>
+              </div>
+
+              <div id="purchase_recommendations">
+                <div><h3 class="recom_h3">Recommendations for you</h3></div>
+
+                <div id="recommended_apps" class="vertical_align space_between">
+                  <div id="app1" class="height100">
+                    <div class="black">
+                      <img src="index_files/capsule_184x69_017.jpg" width="220px">
+                      <div class="recommend_app vertical_align space_between">
+                        <span style="background-image: url( 'public/images/v6/icon_platform_win.png'); width: 20px; height: 20px;"></span>
+                        <div class="price_box height100 vertical_align">Free</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="app2" class="height100">
+                    <div class="black">
+                      <img src="index_files/capsule_184x69_020.jpg" width="220px">
+                      <div class="recommend_app vertical_align space_between">
+                        <span style="background-image: url( 'public/images/v6/icon_platform_win.png'); width: 20px; height: 20px;"></span>
+                        <div class="price_box height100 vertical_align">11.39€</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="app3" class="height100">
+                    <div class="black">
+                      <img src="index_files/capsule_184x69_023.jpg"width="220px">
+                      <div class="recommend_app vertical_align space_between">
+                        <span style="background-image: url( 'public/images/v6/icon_platform_win.png'); width: 20px; height: 20px;"></span>
+                        <div class="price_box height100 vertical_align">39.99€</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="right_purchase_area">
+            <div>
+              <div id="purchase_item">
+                <div id="estimated_total" class="vertical_align space_between">
+                  <p style="display: inline; font-size: 15px; color: #fff;">Estimated total</p>
+                  <p style="display: inline; font-size: 17px; font-weight: bold; color: #fff;">7.99€</p>
+                </div>
+
+                <div id="sales_tax_div">
+                  <p>Sales tax will be calculated during checkout where applicable</p>
+                </div>
+
+                <div id="purchase_div">
+                  <button class="default_button lively_button width100">Continue to payment</button>
+                </div>
+
+                <div style="height: 20px;">
+                  
+                </div>
+              </div>
+
+              <div id="purchase_warning">
+                <img src="images/computer.png" width="100%" alt="steam computer">
+
+                <p id="fancy_p">A purchase of a digital product grants a license for the product on Steam.</p>
+                <p style="display: inline;">For full terms and conditions, please see the </p>
+                <a href="https://store.steampowered.com/subscriber_agreement/">Steam Subscriber Agreement</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="miniprofile_hover" style="display: none;">
+      <div class="shadow_ul"></div>
+      <div class="shadow_top"></div>
+      <div class="shadow_ur"></div>
+      <div class="shadow_left"></div>
+      <div class="shadow_right"></div>
+      <div class="shadow_bl"></div>
+      <div class="shadow_bottom"></div>
+      <div class="shadow_br"></div>
+      <div class="miniprofile_hover_inner shadow_content"></div>
+    </div>
+    <div id="review_histogram_tooltip"></div>
+
+    <!-- IMPORTANT SCRIPTS here! -->
+    <script src="js/logoUpdater.js"></script>
+    <script src="js/colorPicker.js"></script>
+    <script src="js/pageChanger.js"></script>
 </body>
 
 </html>

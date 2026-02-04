@@ -16,9 +16,6 @@ const outer_section = document.getElementById("outer_section");
 const topGradColor = document.getElementById("topSvgColor");
 const bottomGradColor = document.getElementById("bottomSvgColor");
 
-// png element
-const steam_logo_png = document.getElementById("steamLogoPNG");
-
 function updateSVG() {
   const svg = document.getElementById("steamLogoSVG");
   const hc = document.getElementById("handle_circles");
